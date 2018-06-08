@@ -1,0 +1,35 @@
+######################### R CODE #####################################################
+#  AUC -- LIFT CHART METHOD 
+#  Arguments - 1. actual <- vector containing target variable
+#              2. pred_probs <- vector containing predicted probability values
+#  Returns - AUC value - in range [0,1] 
+#  LIBRARY -- "data.table"
+
+AUC_fun  <- function(actual, pred_probs){
+  df <- cbind(as.data.frame(actual), as.data.frame(pred_probs))
+  setDT(df)
+  df <- df[order(-eval(pred_probs))]
+  df[,com_sum := cumsum(eval(actual))]
+  df[,per_y := com_sum/max(com_sum)]
+  
+  return(sum(df$per_y)/nrow(df)) 
+}
+######################################################################################
+
+######################## PYTHON CODE #################################################
+def auc_lift(actual, pred_probs):
+  '''
+    Computes the AUC as per the lift chart
+        Arguments - 1. actual - vector containing target variable : shape will be (num_examples,1)
+                    2. pred_probs - vector containing predicted probability values : shape will be (num_examples, num_classes)
+        Returns - AUC value - in range [0,1] 
+    '''
+	comp_df = pd.DataFrame({'Actual': actual, 'Predicted': pred_probs[:,1] })
+	comp_df = comp_df.sort_values(by = 'Predicted',ascending=False)
+	comp_df['CumulSum'] = comp_df.Actual.cumsum()
+	comp_df['PercentCovered'] = comp_df['CumulSum']/(comp_df.Actual.sum())
+	auc_lift = comp_df['PercentCovered'].sum()/len(comp_df)
+
+	return auc_lift
+
+######################################################################################
