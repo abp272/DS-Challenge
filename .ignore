@@ -3,3 +3,34 @@ Hey
 Text Classification Using CNN, LSTM and Pre-trained Glove Word Embeddings: Part-3
 
 https://towardsdatascience.com/word-embedding-with-word2vec-and-fasttext-a209c1d3e12c
+
+ 	Opensource	Url	Speaker verification	Speaker Identification	Pricing
+ 	 	 	 	 	 
+Alize	Y	http://alize.univ-avignon.fr/#help
+ 	 	 
+VoiceVault	N	https://voicevault.com/products/vigo-mobile-identity-verification/vigo-is-designed-for-developers/
+ 	 	 
+VoiceTrust	N	http://www.voicetrust.com
+ 	 	 
+Nuance	N	https://www.nuance.com/automotive/voice-biometrics.html
+ 	 	 
+VoiceIt	N	https://voiceit.io/
+ Y	Y	 
+Microsoft Voice Authentication	N	https://azure.microsoft.com/en-in/services/cognitive-services/speaker-recognition/
+ Y	Y	 
+SayPay	N	http://saypaytechnologies.com/
+ 	 	 
+ 	 	 	 	 	 
+ 	 	 	 	 	 
+Articles	 	https://patents.google.com/patent/US6088669A/en
+ 	 	 
+ 	 	https://www.microsoft.com/en-us/research/wp-content/uploads/2000/01/i00_2495_TeunenShahHeck.pdf
+ 	 	 
+ 	 	 http://techgenix.com/biometric-authentication/
+http://www.biometric-solutions.com/speaker-recognition.html
+ 	 	 
+
+
+Python library for Microsoft Voice authentication : https://github.com/Microsoft/Cognitive-SpeakerRecognition-Python
+
+
